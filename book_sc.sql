@@ -1,6 +1,4 @@
-create database book_sc;
-
-use book_sc;
+use ics499fa160124;
 
 create table customers
 (

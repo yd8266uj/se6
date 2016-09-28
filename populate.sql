@@ -1,4 +1,4 @@
-USE book_sc;
+USE ics499fa160124;
 
 
 INSERT INTO books VALUES ('0672329166','Luke Welling and Laura Thomson','PHP and MySQL Web Development',1,49.99,

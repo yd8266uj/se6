@@ -1,7 +1,7 @@
 <?php
 
 function db_connect() {
-   $result = new mysqli('localhost', 'book_sc', 'password', 'book_sc');
+   $result = new mysqli('localhost', 'ics499fa160124', 'password', 'book_sc');
    if (!$result) {
       return false;
    }

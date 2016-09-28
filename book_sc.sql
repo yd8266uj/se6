@@ -58,5 +58,5 @@ create table admin
 );
 
 grant select, insert, update, delete
-on book_sc.*
-to book_sc@localhost identified by 'password';
+on ics499fa160124.*
+to ics499fa160124@localhost identified by 'password';

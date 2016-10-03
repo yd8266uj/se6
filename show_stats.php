@@ -4,12 +4,11 @@
   session_start();
 
   do_html_header("Database Statistics");
-  
-
- echo "<p>Please choose a category:</p>";
-
   $result =get_statistics();
-  echo $result["books_count"];
-  
+printf("Categories: %s<br>\n",$result["categories_count"]);
+printf("Total Number of Books: %s<br>\n",$result["books_count"]);
+printf("Total Cost of the Books: %s<br>\n",$result["books_total_cost"]);
+printf("Average Cost of the Book: %s<br>\n",$result["books_average_cost"]);
+ 
   do_html_footer();
 ?>

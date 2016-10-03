@@ -5,10 +5,12 @@
 
   do_html_header("Database Statistics");
   
+
+ echo "<p>Please choose a category:</p>";
   $conn = db_connect();
   $query = "SELECT * FROM stats";
   $result = $conn->query($query);
-  echo 'Categories:'.$result['categories_count'];
+  echo "Categories:".$result['categories_count'];
   
   do_html_footer();
 ?>

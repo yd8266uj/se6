@@ -9,7 +9,7 @@
  echo "<p>Please choose a category:</p>";
 
   $result =get_statistics();
-  echo $result[0];
+  echo $result["books_count"];
   
   do_html_footer();
 ?>

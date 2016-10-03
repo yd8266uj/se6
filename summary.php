@@ -18,8 +18,8 @@
 
   print "<p>Total Number of Categories: ". $obj->getNumCategories(). "</p>";
   print "<p>Total Number of Books: ". $obj->getNumBooks(). "</p>";
-  print "<p>Total Cost of Books: ". $obj->getTotalBookCost(). "</p>";
-  print "<p>Average Cost of Books: ";
+  print "<p>Total Cost of Books: $". $obj->getTotalBookCost(). "</p>";
+  print "<p>Average Cost of Books: $";
   printf("%.2f", $obj->getAvgBookCost());
   print " </p>";
 

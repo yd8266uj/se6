@@ -20,22 +20,13 @@ class Summarize {
         $this->book_average_query = 'select avg(price) from books';
 
     }
-
-
-    public function open_db(){
-        $connect = mysqli_connect('localhost','book_sc', 'password', 'book_sc' );
-        if(!$connect){
-            return false;
-        }
-        return $connect;
-    }
-
+    
     public function close_db($connection){
         mysqli_close($connection);
     }
 
     public function getNumCategories(){
-        if($connect = $this->db_connect()){
+        if($connect = db_connect()){
             $result = $connect -> query($this->num_cat_query);
             $num_cat = $result->fetch_assoc();
             $this->close_db($connect);
@@ -49,7 +40,7 @@ class Summarize {
     }
 
     public function getNumBooks(){
-        if($connect = $this->db_connect()){
+        if($connect = db_connect()){
             $result = $connect -> query($this->num_books_query);
             $num_books = $result->fetch_assoc();
             $this->close_db($connect);
@@ -62,7 +53,7 @@ class Summarize {
     }
 
     public function getTotalBookCost(){
-        if($connect = $this->db_connect()){
+        if($connect = db_connect()){
             $result = $connect -> query($this->books_cost_query);
             $tot_cost = $result -> fetch_assoc();
             $this->close_db($connect);
@@ -75,7 +66,7 @@ class Summarize {
     }
 
     public function getAvgBookCost(){
-        if($connect = $this->db_connect()){
+        if($connect = db_connect()){
             $result = $connect -> query($this->book_average_query);
             $avg_cost = $result -> fetch_assoc();
             $this->close_db($connect);

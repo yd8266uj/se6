@@ -17,7 +17,7 @@ function get_statistics() {
       return false;
    }
    $result = db_result_to_array($result);
-   return $result;
+   return $result[0];
 }
 
 function get_categories() {

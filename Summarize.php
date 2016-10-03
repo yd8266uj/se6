@@ -35,7 +35,7 @@ class Summarize {
     }
 
     public function getNumCategories(){
-        if($connect = $this->open_db()){
+        if($connect = $this->db_connect()){
             $result = $connect -> query($this->num_cat_query);
             $num_cat = $result->fetch_assoc();
             $this->close_db($connect);
@@ -49,7 +49,7 @@ class Summarize {
     }
 
     public function getNumBooks(){
-        if($connect = $this->open_db()){
+        if($connect = $this->db_connect()){
             $result = $connect -> query($this->num_books_query);
             $num_books = $result->fetch_assoc();
             $this->close_db($connect);
@@ -62,7 +62,7 @@ class Summarize {
     }
 
     public function getTotalBookCost(){
-        if($connect = $this->open_db()){
+        if($connect = $this->db_connect()){
             $result = $connect -> query($this->books_cost_query);
             $tot_cost = $result -> fetch_assoc();
             $this->close_db($connect);
@@ -75,7 +75,7 @@ class Summarize {
     }
 
     public function getAvgBookCost(){
-        if($connect = $this->open_db()){
+        if($connect = $this->db_connect()){
             $result = $connect -> query($this->book_average_query);
             $avg_cost = $result -> fetch_assoc();
             $this->close_db($connect);

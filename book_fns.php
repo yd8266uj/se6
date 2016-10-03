@@ -12,8 +12,8 @@ function get_statistics() {
    if (!$result) {
      return false;
    }
-   $num_cats = @$result->num_rows;
-   if ($num_cats == 0) {
+   $num_rows = @$result->num_rows;
+   if ($num_rows == 0) {
       return false;
    }
    $result = db_result_to_array($result);

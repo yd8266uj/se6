@@ -7,10 +7,9 @@
   
 
  echo "<p>Please choose a category:</p>";
-  $conn = db_connect();
-  $query = "SELECT * FROM stats";
-  $result = $conn->query($query);
-  echo "Categories:";
+
+  $result =get_statistics();
+  echo $result[0];
   
   do_html_footer();
 ?>

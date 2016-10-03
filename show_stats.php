@@ -8,7 +8,7 @@
   $conn = db_connect();
   $query = "SELECT * FROM stats";
   $result = $conn->query($query);
-  echo $result['categories_count'];
+  echo 'Categories:'.$result['categories_count'];
   
   do_html_footer();
 ?>

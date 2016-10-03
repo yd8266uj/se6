@@ -6,9 +6,9 @@
   do_html_header("Database Statistics");
   
   $conn = db_connect();
-  $query = "SELECT * FROM stats")";
-  $result = $conn->query($query);
-  var_dump($result);
+  //$query = "SELECT * FROM stats";
+  //$result = $conn->query($query);
+  //var_dump($result);
   
   do_html_footer();
 ?>

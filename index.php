@@ -12,6 +12,8 @@
   // display as links to cat pages
   display_categories($cat_array);
 
+  print "<p><a href='summary.php'>Show Inventory Summary</a></p>";
+
   // if logged in as admin, show add, delete, edit cat links
   if(isset($_SESSION['admin_user'])) {
     display_button("admin.php", "admin-menu", "Admin Menu");
